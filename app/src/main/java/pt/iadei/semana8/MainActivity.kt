@@ -30,7 +30,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import pt.iadei.semana8.ui.components.EventCard
-import pt.iadei.semana8.ui.theme.Semana8Theme
 import java.util.Calendar
 
 class MainActivity : ComponentActivity() {
@@ -38,7 +37,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            Semana8Theme {
+            MaterialTheme {
                 HomePage()
             }
         }
@@ -116,7 +115,7 @@ fun HomePage() {
 @Preview(showBackground = true)
 @Composable
 fun HomePreview() {
-    Semana8Theme {
+    MaterialTheme {
         HomePage()
     }
 }
