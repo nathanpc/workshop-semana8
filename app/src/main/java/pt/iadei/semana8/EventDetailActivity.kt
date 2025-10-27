@@ -80,7 +80,7 @@ fun DetailView() {
 
                     // Texto
                     Text(
-                        text = "Workshop de Git e Github para você virar um mestre nessas ferramentas"
+                        text = "Workshop de Git e Github para você se tornar um mestre nessas ferramentas"
                                 + "",
                         style = MaterialTheme.typography.bodyMedium
                     )
