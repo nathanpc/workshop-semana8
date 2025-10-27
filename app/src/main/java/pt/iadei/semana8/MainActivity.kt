@@ -30,7 +30,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import pt.iadei.semana8.ui.components.EventCard
-import pt.iadei.semana8.ui.theme.Semana8Theme
 import java.util.Calendar
 
 class MainActivity : ComponentActivity() {
@@ -38,7 +37,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            Semana8Theme {
+            MaterialTheme {
                 HomePage()
             }
         }
@@ -98,8 +97,10 @@ fun HomePage() {
                 """.trimIndent(),
             )
 
-            Column(){
-                EventCard(
+            Column(
+                modifier = Modifier.padding(horizontal = 10.dp)
+            ) {
+				EventCard(
                    title = "fafafas",
                     room = "3242",
                     date = Calendar.getInstance(),
@@ -112,6 +113,14 @@ fun HomePage() {
                     room = "34",
                     date = Calendar.getInstance(),
                     rsvp = 33,
+					posterId = R.drawable.git_guide
+                )
+
+                EventCard(
+                    title = "The Git's Guide to the Galaxy",
+                    room = "Lab. Computacao Fisica",
+                    date = Calendar.getInstance(),
+                    rsvp = 92,
                     posterId = R.drawable.git_guide
                 )
             }
@@ -122,7 +131,7 @@ fun HomePage() {
 @Preview(showBackground = true)
 @Composable
 fun HomePreview() {
-    Semana8Theme {
+    MaterialTheme {
         HomePage()
     }
 }
