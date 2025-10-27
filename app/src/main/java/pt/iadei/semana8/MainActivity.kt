@@ -29,7 +29,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import pt.iadei.semana8.ui.components.EventCard
 import pt.iadei.semana8.ui.theme.Semana8Theme
+import java.util.Calendar
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -95,6 +97,18 @@ fun HomePage() {
                     You have pressed the floating action button $presses times.
                 """.trimIndent(),
             )
+
+            Column(
+                modifier = Modifier.padding(horizontal = 10.dp)
+            ) {
+                EventCard(
+                    title = "The Git's Guide to the Galaxy",
+                    room = "Lab. Computacao Fisica",
+                    date = Calendar.getInstance(),
+                    rsvp = 92,
+                    posterId = R.drawable.git_guide
+                )
+            }
         }
     }
 }
