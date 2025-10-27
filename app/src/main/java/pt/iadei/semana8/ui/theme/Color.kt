@@ -1,4 +1,4 @@
-package com.example.compose
+package pt.iadei.semana8.ui.theme
 import androidx.compose.ui.graphics.Color
 
 val primaryLight = Color(0xFF5B631E)
